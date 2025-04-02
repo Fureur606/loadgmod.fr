@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Screen - Garry's Mod</title>
+  <style>
+    /* Réinitialisation des styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fond d'écran */
+    body {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Conteneur principal */
+    .loading-screen {
+      text-align: center;
+    }
+
+    /* Logo GMod */
+    .logo {
+      width: 200px;
+      height: 200px;
+      background-image: url('https://i.imgur.com/your-gmod-logo.png'); /* Remplacez par le chemin de votre logo */
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Titre */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ff6b6b; /* Couleur rouge typique de GMod */
+    }
+
+    /* Barre de progression */
+    .progress-container {
+      width: 80%;
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #333333;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 10px;
+      background-color: #ff6b6b;
+      animation: progress-animation 3s ease-in-out infinite;
+    }
+
+    /* Animation de la barre de progression */
+    @keyframes progress-animation {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    /* Texte de chargement */
+    .loading-text {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #cccccc;
+    }
+
+    /* Effet de clignotement pour le texte "Chargement..." */
+    .loading-text span {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-screen">
+    <!-- Logo -->
+    <div class="logo"></div>
+
+    <!-- Titre -->
+    <h1>Garry's Mod</h1>
+
+    <!-- Barre de progression -->
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+
+    <!-- Texte de chargement -->
+    <div class="loading-text">
+      Chargement<span>.</span><span>.</span><span>.</span>
+    </div>
+  </div>
+</body>
+</html>
